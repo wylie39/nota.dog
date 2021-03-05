@@ -1,7 +1,7 @@
 {
-	"name": "react",
+	"name": "notadog",
 	"version": "1.0.0",
-	"description": "React example starter project",
+	"description": "Test if a its a dog",
 	"keywords": [
 		"react",
 		"starter"
