@@ -1,49 +1,38 @@
 import React from 'react'
+import Upload from './components/upload'
+import Results from './components/results'
 import { predict } from './helpers/helpers'
+
 var loadImage = require('blueimp-load-image')
 
 export default class App extends React.Component {
 	state = {
-		data: [],
+		results: [],
 	}
 
 	handleFiles = (e) => {
 		loadImage(
 			e.target.files[0],
 			async (img) => {
-				this.setState({ data: await predict(img) })
+				this.setState({ results: await predict(img) })
 			},
 			{ maxWidth: 600 } // Options
 		)
 	}
+	handleback = () => {
+		this.setState({ results: [] })
+	}
 
 	render() {
-		if (Object.keys(this.state.data).length) {
-			const list = this.state.data.sort()
+		if (Object.keys(this.state.results).length) {
 			return (
-				<div className="App">
-					<input
-						type="file"
-						accept="image/*"
-						onChange={this.handleFiles}
-					/>
-					{list.map((o, index) => (
-						<p>
-							{o.className} : {o.probability.toFixed(2)}
-						</p>
-					))}
-				</div>
+				<Results
+					handleback={this.handleback}
+					results={this.state.results}
+				/>
 			)
 		} else {
-			return (
-				<div className="App">
-					<input
-						type="file"
-						accept="image/*"
-						onChange={this.handleFiles}
-					/>
-				</div>
-			)
+			return <Upload handleFiles={this.handleFiles} />
 		}
 	}
 }
