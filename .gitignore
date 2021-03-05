@@ -1,4 +1,5 @@
-
+.firebase
+/firebase/public
 .idea/
 .vscode/
 node_modules/
