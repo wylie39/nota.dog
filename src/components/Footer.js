@@ -4,11 +4,9 @@ var style = {
 	backgroundColor: '#00a9a5',
 	borderTop: '1px solid #00a9a5',
 	textAlign: 'center',
-	padding: '20px',
-	position: 'fixed',
 	left: '0',
 	bottom: '0',
-	height: '60px',
+	height: '30px',
 	width: '100%',
 }
 

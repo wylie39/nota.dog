@@ -3,7 +3,7 @@ import './navbar.css'
 export default class ClientTopNav extends React.Component {
 	render() {
 		return (
-			<nav className="navbar navbar-dark bg-primary fixed-top">
+			<nav className="navbar navbar-dark bg-primary">
 				<div className="logo">
 					<a href="/">
 						<img

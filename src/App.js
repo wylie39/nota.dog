@@ -58,7 +58,6 @@ export default class App extends React.Component {
 							<div className="lds-dual-ring"></div>
 						</div>
 						<h3 className="loading-msg">{messages[random]}</h3>
-						<Footer key="2" />
 					</div>
 				)
 			}

@@ -43,21 +43,21 @@ export default class Results extends React.Component {
 								]
 							}
 						</p>
+						<Button
+							variant="primary"
+							onClick={this.props.handleback}
+							className="btn-back"
+						>
+							{
+								Labels[
+									JSON.stringify(obj.className).replace(
+										/['"]+/g,
+										''
+									)
+								]
+							}
+						</Button>
 					</div>
-					<Button
-						variant="primary"
-						onClick={this.props.handleback}
-						className="btn-back"
-					>
-						{
-							Labels[
-								JSON.stringify(obj.className).replace(
-									/['"]+/g,
-									''
-								)
-							]
-						}
-					</Button>
 				</div>
 			</div>
 		)
