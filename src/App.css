@@ -17,10 +17,10 @@ body {
 .loading {
 	margin: 0;
 	position: absolute;
-	top: 25%;
+	top: 30%;
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
-	left: 35%;
+	left: 40%;
 }
 .loading-msg {
 	width: 20rem;
@@ -30,4 +30,30 @@ body {
 	text-align: center;
 	left: 15%;
 	top: 40%;
+}
+
+/*pure css loader*/
+.lds-dual-ring {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+}
+.lds-dual-ring:after {
+	content: ' ';
+	display: block;
+	width: 64px;
+	height: 64px;
+	margin: 8px;
+	border-radius: 50%;
+	border: 6px solid #ff3864;
+	border-color: #ff3864 transparent #ff3864 transparent;
+	animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }

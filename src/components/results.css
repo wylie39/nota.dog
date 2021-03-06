@@ -1,0 +1,9 @@
+.btn-back {
+	margin-left: 2rem;
+	margin-top: 5rem;
+	background-color: #e07a5f;
+}
+
+.btn-back:hover {
+	background-color: #392f5a;
+}

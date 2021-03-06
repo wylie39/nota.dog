@@ -2,12 +2,9 @@ import React from 'react'
 import './App.css'
 import Upload from './components/upload'
 import { messages } from './components/message'
-import { SelfBuildingSquareSpinner } from 'react-epic-spinners'
 import Results from './components/results'
 import ClientTopNav from './components/ClientTopNav'
 import { predict } from './helpers/helpers'
-
-var loadImage = require('blueimp-load-image')
 
 export default class App extends React.Component {
 	state = {
@@ -15,13 +12,16 @@ export default class App extends React.Component {
 		loc: 'home',
 	}
 
-	handleFiles = (e) => {
-		this.setState({ results: [] })
+	handleFiles = async (file, url) => {
 		this.setState({ loc: 'results' })
-		loadImage(e.target.files[0], async (img) => {
-			this.setState({ results: await predict(img) })
+		const img = new Image()
+		img.src = url
+		this.setState({
+			results: await predict(img),
+			imgurl: url[0],
 		})
 	}
+
 	handleback = () => {
 		this.setState({ results: [], loc: 'home' })
 	}
@@ -42,6 +42,7 @@ export default class App extends React.Component {
 						<Results
 							handleback={this.handleback}
 							results={this.state.results}
+							img={this.state.imgurl}
 						/>
 					</div>
 				)
@@ -51,10 +52,7 @@ export default class App extends React.Component {
 					<div>
 						<ClientTopNav />
 						<div className="loading">
-							<SelfBuildingSquareSpinner
-								color="#EE964B"
-								size="140"
-							/>
+							<div class="lds-dual-ring"></div>
 						</div>
 						<h3 className="loading-msg">{messages[random]}</h3>
 					</div>

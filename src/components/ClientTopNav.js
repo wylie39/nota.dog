@@ -15,7 +15,6 @@ export default class ClientTopNav extends React.Component {
 					</a>
 					<h3 className="name">Not A Dog</h3>
 				</div>
-				{}
 			</nav>
 		)
 	}
