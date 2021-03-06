@@ -10,7 +10,7 @@ const metadataURL = {
 	timeStamp: '2021-03-05T16:32:01.301Z',
 	userMetadata: {},
 	modelName: 'tm-my-image-model',
-	labels: ['Dog!', 'Not a dog', 'Corgi'],
+	labels: ['dog', 'notdog', 'Corgi'],
 }
 let model
 

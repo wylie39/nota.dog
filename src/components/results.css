@@ -7,3 +7,35 @@
 .btn-back:hover {
 	background-color: #392f5a;
 }
+
+.card {
+	position: absolute;
+	top: 20rem;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	border-radius: 5px; /* 5px rounded corners */
+	width: 272px;
+	color: black;
+	text-align: center;
+}
+.card-text {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	vertical-align: middle;
+}
+
+.card:hover {
+	box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Add rounded corners to the top left and the top right corner of the image */
+img {
+	border-radius: 5px 5px 0 0;
+}
+
+.card-holder {
+	display: flex;
+	position: relative;
+}

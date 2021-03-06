@@ -6,7 +6,7 @@
 	padding-left: 0;
 	margin-bottom: 0;
 	list-style: none;
-	text-align: right;
+	text-align: center;
 }
 .logo_text {
 	font-family: Gill Sans, Gill Sans;
@@ -23,12 +23,15 @@
 	background-color: inherit !important;
 }
 .logo {
+	padding-left: 6rem;
 	display: flex;
 	align-items: center;
 }
+.img {
+}
 
 .name {
-	color: #faf0ca;
+	color: #250902;
 	margin-top: 0;
 	margin-bottom: 0;
 	padding-left: 0.5rem;

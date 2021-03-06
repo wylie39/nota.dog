@@ -7,6 +7,7 @@ export default class ClientTopNav extends React.Component {
 				<div className="logo">
 					<a href="/">
 						<img
+							className="img"
 							src="/icon.svg"
 							alt="logo"
 							width="50"

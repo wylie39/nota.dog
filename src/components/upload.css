@@ -1,4 +1,4 @@
-.btn-upload {
+.upload-div {
 	margin-top: 10rem;
 	margin-left: 3rem;
 }
@@ -7,4 +7,10 @@
 	padding-top: 5rem;
 	padding-left: 2rem;
 	padding-right: 5rem;
+}
+
+.btn-upload {
+	box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+	background-color: #fea668 !important;
+	color: #ffff !important;
 }

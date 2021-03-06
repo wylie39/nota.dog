@@ -14,17 +14,33 @@ export default class Results extends React.Component {
 		var obj = list.find(function (o) {
 			return o.probability === res
 		})
+		var Names = {
+			dog: "It's a dog 🐶",
+			notdog: "It's not a dog, sad 😢",
+			Corgi: "it's a corgi 🐶",
+		}
 		return (
-			<div>
-				<div>
+			<div class="card-holder">
+				<div class="card">
 					<img
 						src={this.props.img}
-						alt="test"
-						width="200"
-						height="300"
+						alt="Avatar"
+						style={{ width: '270px', height: '270px' }}
 					/>
+					<div class="container">
+						<p className="card-text">
+							{
+								Names[
+									JSON.stringify(obj.className).replace(
+										/['"]+/g,
+										''
+									)
+								]
+							}
+						</p>
+					</div>
 				</div>
-				<h2>{JSON.stringify(obj.className).replace(/['"]+/g, '')}</h2>
+				<div></div>
 				<Button
 					variant="primary"
 					onClick={this.props.handleback}
