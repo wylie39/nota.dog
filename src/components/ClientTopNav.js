@@ -14,7 +14,7 @@ export default class ClientTopNav extends React.Component {
 							height="60"
 						/>
 					</a>
-					<h3 className="name">Not A Dog</h3>
+					<h3 className="name">Not a Dog</h3>
 				</div>
 			</nav>
 		)

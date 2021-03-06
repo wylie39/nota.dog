@@ -11,8 +11,8 @@ export default class Upload extends React.Component {
 						<p>
 							Click below to take or upload an image and the
 							Machine learning algorithm will tell if the image is
-							a dog or not. And because this is for Corgi Hacks it
-							can also tell if it’s a corgi.
+							a dog or not. Because this was made for the Corgi
+							Hacks hackathon it can also tell if it’s a corgi.
 						</p>
 					</div>
 				</div>
