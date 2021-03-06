@@ -19,15 +19,20 @@ export default class Results extends React.Component {
 			notdog: "It's not a dog, sad 😢",
 			Corgi: "it's a corgi 🐶",
 		}
+		var Labels = {
+			dog: "Let's do it again",
+			Corgi: "Let's do it again",
+			notdog: 'Try again',
+		}
 		return (
-			<div class="card-holder">
-				<div class="card">
+			<div className="card-holder">
+				<div className="card">
 					<img
 						src={this.props.img}
 						alt="Avatar"
 						style={{ width: '270px', height: '270px' }}
 					/>
-					<div class="container">
+					<div className="container">
 						<p className="card-text">
 							{
 								Names[
@@ -39,15 +44,21 @@ export default class Results extends React.Component {
 							}
 						</p>
 					</div>
+					<Button
+						variant="primary"
+						onClick={this.props.handleback}
+						className="btn-back"
+					>
+						{
+							Labels[
+								JSON.stringify(obj.className).replace(
+									/['"]+/g,
+									''
+								)
+							]
+						}
+					</Button>
 				</div>
-				<div></div>
-				<Button
-					variant="primary"
-					onClick={this.props.handleback}
-					className="btn-back"
-				>
-					Back
-				</Button>
 			</div>
 		)
 	}

@@ -1,11 +1,23 @@
 .btn-back {
-	margin-left: 2rem;
-	margin-top: 5rem;
-	background-color: #e07a5f;
+	position: absolute;
+	bottom: -5rem;
+	width: 10rem;
+	margin-left: 24% !important;
+	padding: 10px 23px;
+	background: #fea668;
+	border-radius: 30px;
+	color: white;
+	font-weight: 300;
+	font-size: 14px;
+	margin: 10px 0;
+	transition: all 0.2s ease-in;
+	cursor: pointer;
+	outline: none;
+	border: none;
 }
 
 .btn-back:hover {
-	background-color: #392f5a;
+	background-color: #399e5a;
 }
 
 .card {
