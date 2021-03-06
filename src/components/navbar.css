@@ -1,0 +1,43 @@
+.navbar-nav {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	padding-left: 0;
+	margin-bottom: 0;
+	list-style: none;
+	text-align: right;
+}
+.logo_text {
+	font-family: Gill Sans, Gill Sans;
+	color: #ffff;
+	font-size: 155%;
+	background-color: #17508e;
+	width: 120%;
+	border-style: solid;
+	border-width: 5px;
+	text-align: center;
+	vertical-align: middle;
+}
+.bg-primary {
+	background-color: inherit !important;
+}
+.logo {
+	display: flex;
+	align-items: center;
+}
+
+.name {
+	color: #faf0ca;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0.5rem;
+}
+
+.fixed-top {
+	position: sticky;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1030;
+}

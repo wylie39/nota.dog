@@ -1,0 +1,33 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+	position: relative;
+	min-height: 100%;
+	max-width: 43rem;
+	margin: 0 auto;
+}
+body {
+	margin-bottom: 60px; /* Margin bottom by footer height */
+	background-color: #00a9a5;
+	font-family: Gill Sans;
+	font-size: 1.4rem;
+	color: #fffcf7;
+}
+
+.loading {
+	margin: 0;
+	position: absolute;
+	top: 25%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: 35%;
+}
+.loading-msg {
+	width: 20rem;
+	position: absolute;
+	padding-top: 7rem;
+	position: absolute;
+	text-align: center;
+	left: 15%;
+	top: 40%;
+}
