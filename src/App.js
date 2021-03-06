@@ -4,6 +4,7 @@ import Upload from './components/upload'
 import { messages } from './components/message'
 import Results from './components/results'
 import ClientTopNav from './components/ClientTopNav'
+import Footer from './components/Footer'
 import { predict } from './helpers/helpers'
 
 export default class App extends React.Component {
@@ -32,6 +33,7 @@ export default class App extends React.Component {
 				<div>
 					<ClientTopNav />
 					<Upload handleFiles={this.handleFiles} />
+					<Footer />
 				</div>
 			)
 		} else if (this.state.loc === 'results') {
@@ -44,6 +46,7 @@ export default class App extends React.Component {
 							results={this.state.results}
 							img={this.state.imgurl}
 						/>
+						<Footer />
 					</div>
 				)
 			} else {
@@ -55,6 +58,7 @@ export default class App extends React.Component {
 							<div class="lds-dual-ring"></div>
 						</div>
 						<h3 className="loading-msg">{messages[random]}</h3>
+						<Footer key="2" />
 					</div>
 				)
 			}
