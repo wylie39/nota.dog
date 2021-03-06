@@ -8,31 +8,34 @@ var loadImage = require('blueimp-load-image')
 export default class App extends React.Component {
 	state = {
 		results: [],
+		loc: 'home',
 	}
 
 	handleFiles = (e) => {
-		loadImage(
-			e.target.files[0],
-			async (img) => {
-				this.setState({ results: await predict(img) })
-			},
-			{ maxWidth: 600 } // Options
-		)
+		this.setState({ results: [] })
+		this.setState({ loc: 'results' })
+		loadImage(e.target.files[0], async (img) => {
+			this.setState({ results: await predict(img) })
+		})
 	}
 	handleback = () => {
-		this.setState({ results: [] })
+		this.setState({ results: [], loc: 'home' })
 	}
 
 	render() {
-		if (Object.keys(this.state.results).length) {
-			return (
-				<Results
-					handleback={this.handleback}
-					results={this.state.results}
-				/>
-			)
-		} else {
+		if (this.state.loc === 'home') {
 			return <Upload handleFiles={this.handleFiles} />
+		} else if (this.state.loc === 'results') {
+			if (Object.keys(this.state.results).length) {
+				return (
+					<Results
+						handleback={this.handleback}
+						results={this.state.results}
+					/>
+				)
+			} else {
+				return <h1>loading</h1>
+			}
 		}
 	}
 }
