@@ -9,10 +9,11 @@ export default class Upload extends React.Component {
 				<div className="card-holder">
 					<div className="card-upload">
 						<p>
-							Click below to take or upload an image and the
-							Machine learning algorithm will tell if the image is
-							a dog or not. Because this was made for the Corgi
-							Hacks hackathon it can also tell if it’s a corgi.
+							Click below to take or upload an image. The Machine
+							learning algorithm will tell if the image is a dog
+							or not a dog. Because this was made for the Corgi
+							Hacks Hackathon it can also tell you if it’s a
+							corgi.
 						</p>
 					</div>
 				</div>
