@@ -12,6 +12,8 @@ export default class Upload extends React.Component {
 					onChange={this.props.handleFiles}
 					imgExtension={['.jpg', '.png', '.jpeg']}
 					maxFileSize={5242880}
+					className="upload"
+					singleImage={true}
 				/>
 			</div>
 		)
