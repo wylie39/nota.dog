@@ -7,7 +7,7 @@ const metadataURL = {
 	tmVersion: '2.3.1',
 	packageVersion: '0.8.4',
 	packageName: '@teachablemachine/image',
-	timeStamp: '2021-03-05T16:32:01.301Z',
+	timeStamp: '2021-03-07T02:50:06.432Z',
 	userMetadata: {},
 	modelName: 'tm-my-image-model',
 	labels: ['dog', 'notdog', 'Corgi'],
